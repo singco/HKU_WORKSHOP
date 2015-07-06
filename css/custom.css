@@ -1,0 +1,98 @@
+html,body{
+
+	margin:0px;
+	
+}
+
+#map{
+  width: 100%;
+  top: 0;
+  margin:0px;
+  padding:0px;
+}
+#part1{
+	background-color:#333333;
+	height:230px;
+	width:100%;
+	font-size:48px;
+	text-align:center;
+	color:white;
+	padding-top:40px;
+}
+#datasource{padding-top:10px;font-size:18px}
+
+#part2{
+	background-color:#333333;
+	height:100px;
+	width:100%;
+	font-size:48px;
+	text-align:center;
+	color:white;
+	padding-top:40px;
+}
+.desc{margin-top:25px;line-height:2;font-size:20px}
+
+.credit{padding-right:20px}
+
+.export, .import{
+	font-size:12px;
+}
+rect{
+	shape-rendering:crispEdges;
+}
+.row { margin-left:0px; }
+
+.s {margin-left:0px}
+.show {padding-bottom:10px;font-size:18px}
+
+.vco-headline{
+	font-family:arial,"Microsoft YaHei";
+}
+
+.vco-text-content{
+	font-family:arial,"Microsoft YaHei";
+	line-height:2;
+}
+	
+	
+.content-icon {
+  background: #fff;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  display: block;
+  height: 80px;
+  line-height: 120px;
+  position: relative;
+  width: 80px;
+  text-align: center;
+  left: 50%;
+  margin: -40px 0 20px -40px;
+}
+
+.fa-globe:before {
+	font-size:2.5em;
+	margin: 0px 0 20px 0px;
+  content: "\f0ac";
+}
+
+.fa-ship:before {
+	font-size:2em;
+	margin: 0px 0 20px 0px;
+  content: "\f21a";
+}
+
+.fa-bell  :before {
+	font-size:3em;
+	margin: 0px 0 20px 0px;
+  content: "\f0f3";
+}
+
+#singco {
+padding-bottom:20px;
+}
+
+#legend{ padding-left:100px}
+
+.img-circle{width:200px;margin-left:125px;margin-top:30px}
+.pro { font-size:20px;padding-top:10px;padding-bottom:100px}

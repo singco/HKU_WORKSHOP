@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>一带一路</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="./css/style.css">
+	<link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="scripts/d3/d3.js"></script>
+    <script type="text/javascript" src="scripts/d3/math/trigonometry.js"></script>
+    <script type="text/javascript" src="scripts/d3/svg/arc.js"></script>
+    <script type="text/javascript" src="scripts/d3/core/functor.js"></script>
+    <script type="text/javascript" src="scripts/d3/core/source.js"></script>
+    <script type="text/javascript" src="scripts/d3/core/target.js"></script>
+    <script type="text/javascript" src="scripts/d3/layout/arc-chord.js"></script>
+    <script type="text/javascript" src="scripts/d3/svg/arc-chord.js"></script>
+    <script type="text/javascript" src="scripts/brightpoint/gradients.js"></script>
+	<link rel="stylesheet" href="//cdn.knightlab.com/libs/storymapjs/latest/css/storymap.css">
+	<link rel="shortcut icon" href="//cdn.knightlab.com/libs/blueline/latest/assets/logos/favicon.ico">
+	<script type="text/javascript" src="//cdn.knightlab.com/libs/storymapjs/latest/js/storymap-min.js"></script>
+	<script type="text/javascript" src="//cdn.knightlab.com/libs/storymapjs/latest/js/json2.min.js"></script>
+	<script src="http://cdn.knightlab.com/libs/storymapjs/latest/js/locale/zh-cn.js" class="lazyload" charset="utf-8"></script>
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+<div class="container-fluid" id="map">
+	<!-- Part 1 --->
+	<div class="row-fluid">
+		<div id="mapdiv" style="width: 100%; height: 100vh;"></div> 
+	</div>
+	<!-- Part 2标题 --->
+	<div class="row-fluid" id="part1">
+		<p >Chinese and American voices along 'One Belt One Road'</p>
+        <p class="desc" >From January 2010 to June 2015 , global media have reported the relationship between China  and the OBOR countries more than that of the U.S. </br>According to our reporting, China is becoming increasingly involved in the affairs of the OBOR countries. China's new strategy have successfully grabed the attention of the world.</p>
+	</div>
+	<!-- Part 2 --->
+	<div class="row-fluid">
+		<span class="content-icon"><i class="fa fa-globe fa-2x"></i></span>
+		<div id="bpg" style="min-width: 750px;">
+
+		<!--[if IE 6]>
+		<div id="bpg-error">
+			<p>1 This interactive graphic requires a browser with SVG support, such as <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/">Firefox</a>, <a href="http://www.apple.com/safari/download/">Safari</a> or the latest <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">Internet Explorer 9</a>. </p>
+			<img src="images/browserCheck.jpg" alt="Error">
+			<div id="bpg-chartFrame" style="display:none;">
+			</div>
+		<![endif]-->
+
+		<!--[if IE 7]>
+		<div id="bpg-error">
+			<p>2 This interactive graphic requires a browser with SVG support, such as <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/">Firefox</a>, <a href="http://www.apple.com/safari/download/">Safari</a> or the latest <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">Internet Explorer 9</a>. </p>
+			<img src="images/browserCheck.jpg" alt="Error">
+			<div id="bpg-chartFrame" style="display:none;">
+
+		<![endif]-->
+
+		<!--[if IE 8]>
+		<div id="bpg-error">
+			<p>3 This interactive graphic requires a browser with SVG support, such as <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/">Firefox</a>, <a href="http://www.apple.com/safari/download/">Safari</a> or the latest <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">Internet Explorer 9</a>. </p>
+			<img src="images/browserCheck.jpg" alt="Error">
+			<div id="bpg-chartFrame" style="display:none;">
+
+		<![endif]-->
+
+		<!--[if IE 9]>
+		<div id="bpg-chartFrame">
+		<![endif]-->
+
+		<!--[if !IE]>
+		<div id="bpg-chartFrame">
+		<![endif]-->
+
+		<div id="mainDiv">
+			<div id="svgDiv" style="font-size: 10px; width: 600px; height: 800px;"></div>
+
+			<div id="imgDiv" style="position: absolute; top: 50px; left: 100px;">
+				<img id="playPause" src="images/pause_bw.png" width="24" height="24">
+			</div>
+
+		</div>
+			<div id="toolTip" class="tooltip" style="opacity: 0; width: 200px; height: 90px; position: absolute; left: 665px; top: 434px;">
+				<div id="header1" class="header3">Oct 2002</div>
+				<div class="header-rule"></div>
+				<div id="head" class="header">5. Germany</div>
+				<div class="header-rule"></div>
+				<div id="header2" class="header2">Imports: -$5,992,800,000</div>
+				<div class="tooltipTail"></div>
+			</div>
+           <p class="text-right credit" >Data Source: The GDELT Project from Google Big Query, http://gdeltproject.org/.</p>
+	
+	</div>
+	<!-- Part 3标题 --->
+	<div class="row-fluid" id="part1">
+		<p >China's Outward FDI: Past and Future</p>
+        <p class="desc" >China's overseas finance is becoming increasingly influential globally. </br>Since the OBOR policy, China's outward FDI has shifted its focus from energy to transport; and from the Middle East, Africa, and Europe to Southeast and Central Asia.</p>
+	</div >
+	<!-- Part 3 --->
+	<div class="row-fluid">
+		<span class="content-icon"><i class="fa fa-ship fa-2x"></i></span>
+		<div id="singco"></div>
+        <p class="text-right credit" >Data Source: China global investment tracker interactive map from American Enterprise Institute and The Heritage Foundation.</p>
+	</div>
+	<!-- Part 4标题 --->
+	<div class="row-fluid" id="part1">
+		<p >Estimate of the risks of OBOR</p>
+        <p class="desc" > High jobless rate or high debt rate are serious challenges in more than half of the OBOR countries, credit rating have not met investment standards.</br> Therefore there are significant risks to Chinese investment.</p>
+	</div>
+	<!-- Part 4 --->
+	<div class="row-fluid">
+		<span class="content-icon"><i class="fa fa-bell fa-4x"></i></span>
+		<div class="col-md-2" id="legend" ></div>
+    <div class="col-md-7" ></div>
+    <div class="col-md-3" >
+        <p class="show" id="pname"><strong>Countryname：</strong></p>
+        <p class="show" id="pSP"><strong>Credit rating：</strong></p>
+        <p class="show" id="pstatus"><strong>Status：</strong></p>
+        <p class="show" id="pJoblessrate"><strong>Jobless rate：</strong></p>
+        <p class="show" id="pDebt"><strong>Debt rate：</strong></p>
+    </div>
+    
+	</div>
+    <p class="text-right credit" >Data Source: TradingEconomics.com.</p>
+    
+    <div class="row-fluid" id="part2">
+
+		<p >Author</p>
+
+	</div>
+
+	<div class="row-fluid">
+
+		<div class="col-md-3" >
+
+			<img src="../images/w.jpg" alt="..." class="img-circle" >
+
+			<p class="pro" style="text-align:center">Joyce Wen</p>
+
+		</div>
+
+		<div class="col-md-3" >
+
+			<img src="../images/t.jpg" alt="..." class="img-circle">
+
+			<p class="pro" style="text-align:center">Terry Tan</p>
+
+		</div>
+
+		<div class="col-md-3" >
+
+			<img src="../images/s.jpg" alt="..." class="img-circle">
+
+			<p class="pro" style="text-align:center">Singco Sun</p>
+
+		</div>
+
+		<div class="col-md-3" >
+
+			<img src="../images/y.jpg" alt="..." class="img-circle">
+
+			<p class="pro" style="text-align:center">Jessie Yin</p>
+
+		</div>
+
+	</div>
+    
+</div>
+<p style = "text-align: center"> &copy; Big Data Lab at Communication University of China </p>
+
+
+
+
+
+
+    <script type="text/javascript" src="scripts/app/globals.js"></script>
+    <script type="text/javascript" src="scripts/app/initialize.js"></script>
+    <script type="text/javascript" src="scripts/app/events.js"></script>
+    <script type="text/javascript" src="scripts/app/data.js"></script>
+    <script type="text/javascript" src="scripts/app/_buildChords.js"></script>
+    <script type="text/javascript" src="scripts/app/update.js"></script>
+	
+	<script>
+		// storymap_data can be an URL or a Javascript object
+		var storymap_data = './data/demo.json'; 
+
+		// certain settings must be passed within a separate options object
+		var storymap_options = {};
+
+		var storymap = new VCO.StoryMap('mapdiv', storymap_data, storymap_options);
+		window.onresize = function(event) {
+			storymap.updateDisplay(); // this isn't automatic
+		}          
+	</script>
+
+    <script type="text/javascript">
+
+        initialize();
+        fetchData();
+
+        function run() {
+            if (month < 11) month++; else {
+                month=0;
+                if (year < countriesGrouped.length-1) year++;
+            }
+            if (month==maxMonth && year==maxYear)  {
+                month=0;
+                year=0;
+            }
+            else {
+                update(year,month);
+            }
+        }
+
+
+    </script>
+	<script src="./scripts/biPartite.js"></script>
+	<script src="./scripts/jessie.js"></script>
+
+
+
+
+</body>
