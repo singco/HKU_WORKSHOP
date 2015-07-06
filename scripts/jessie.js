@@ -1,11 +1,11 @@
 var width = document.body.clientWidth/2,
-	height = 600;
+	height = window.screen.height-240;
 
 var color = d3.scale.category20();
 	
 var indata = ["Out","In","All"];
 	
-legend = d3.select("#legend").append("svg").attr("width","100%").attr("height",500).selectAll(".legend")
+legend = d3.select("#legend").append("svg").attr("width","100%").attr("height",height).selectAll(".legend")
 			.data(indata)
 			.enter()
 			.append("g")

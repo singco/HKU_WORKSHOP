@@ -1,7 +1,7 @@
 !function(){
 	var bP={};	
 	var b=30, bb=180, height=600, buffMargin=1, minHeight=14;
-	var c1=[-130, 40], c2=[-50, 100], c3=[-10, 140]; //Column positions of labels.
+	var c1=[-170, 40], c2=[-50, 120], c3=[-10, 160]; //Column positions of labels. 每个数组的第一个数字是调整前面三列的位置，第二个数字是调整后面的位置
 	var colors =["#3366CC", "#A55D35" ,"#FF9900","#DC3912", "#990099", "#0099C6","#109618"];
 	
 	bP.partData = function(data,p){
@@ -218,7 +218,7 @@
 		data.forEach(function(biP,s){
 			svg.append("g")
 				.attr("id", biP.id)
-				.attr("transform","translate("+ (550*s)+",0)");
+				.attr("transform","translate("+ (600*s)+",0)");
 				
 			var visData = visualize(biP.data);
 			drawPart(visData, biP.id, 0);
@@ -398,7 +398,7 @@ var sales_data=[
 ['Transport','YEM',0,510],
 ];
 
-var width = document.body.clientWidth-20, height = 640, margin ={b:0, t:40, l:1050/2+20, r:50};
+var width = document.body.clientWidth-20, height = 640, margin ={b:0, t:40, l:(width-1170)/2+180, r:50};
 
 var svg = d3.select("#singco")
 	.append("svg").attr('width',width).attr('height',(height))
